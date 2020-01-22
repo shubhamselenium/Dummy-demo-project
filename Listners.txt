@@ -1,0 +1,53 @@
+package Data_Validation;		
+
+import org.testng.ITestContext ;		
+import org.testng.ITestListener ;		
+import org.testng.ITestResult ;		
+
+public class TestNG_Listeners implements ITestListener						
+{		
+
+    public void onFinish(ITestContext ITC) {					
+
+    	System.out.println("Test_Case Finished Time :-"+ITC.getName());
+    	System.out.println("Finish_Time :-"+new java.util.Date() );
+    }		
+
+    public void onStart(ITestContext ITC2) {					
+    	System.out.println("Test_Case Started Time :-"+ITC2.getName());
+    	System.out.println("Test_Start_Time :-"+new java.util.Date() );        		
+    }		
+
+    public void onTestFailedButWithinSuccessPercentage(ITestResult TBWSP) {	
+    	
+    	/*System.out.println("Test_Failed But Within Success Percentage :-"+TBWSP.getName());
+    	System.out.println("TestFailedButWithinSuccessPercentage Time :-"+new java.util.Date() ); */
+    	
+    }		
+
+    public void onTestFailure(ITestResult TF) {					
+
+    	/*System.out.println("Test_Failure :-"+TF.getName());
+    	System.out.println("Test_Failure_Time :-"+new java.util.Date() );  */
+    }		
+
+    public void onTestSkipped(ITestResult TS) {					
+    	
+    	/*System.out.println("Test_Skipped :-"+TS.getName());
+    	System.out.println("Skipped_Time :-"+new java.util.Date() );  */
+    }		
+
+    public void onTestStart(ITestResult TSRT) {
+    	
+    	/*System.out.println("Test_Start :-"+TSRT.getName());
+    	System.out.println("Start_Time :-"+new java.util.Date() );  */
+    	
+    }		
+
+    public void onTestSuccess(ITestResult TSS) {					
+
+    	/*System.out.println("Test_Success :-"+TSS.getName());
+    	System.out.println("Test_Success_Time :-"+new java.util.Date() );   */  
+    }		
+}		
+
